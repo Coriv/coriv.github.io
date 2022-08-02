@@ -26,11 +26,15 @@ public class SearchFlightEngine {
         return setTo;
     }
     public void findAllFlightsFromTheAirport(Airport airport) {
+        System.out.println("Find all flights from the airport: " + airport);
+
         prepareSetFrom(airport).stream()
                 .forEach(System.out::println);
     }
 
     public void finnAllAirportsWithFlightTo(Airport airport) {
+        System.out.println("Find all airports with flight to: " + airport);
+
         prepareSetTo(airport).stream()
                 .forEach(System.out::println);
     }
