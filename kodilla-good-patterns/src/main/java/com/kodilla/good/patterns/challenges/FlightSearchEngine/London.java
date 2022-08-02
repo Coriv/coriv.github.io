@@ -1,10 +1,11 @@
-package com.kodilla.good.patterns.challenges.flights;
+package com.kodilla.good.patterns.challenges.FlightSearchEngine;
 
+import java.util.HashSet;
 import java.util.Set;
 
-public class Rome implements Airport{
-    private final String name = "Rome";
-    private static Set<Airport> networkConnections;
+public class London implements Airport{
+    private final String name = "London";
+    private static Set<Airport> networkConnections = new HashSet<>();
 
     @Override
     public Set<Airport> getNetworkConnections() {
@@ -18,11 +19,11 @@ public class Rome implements Airport{
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Rome)) return false;
+        if (!(o instanceof London)) return false;
 
-        Rome rome = (Rome) o;
+        London london = (London) o;
 
-        return name.equals(rome.name);
+        return name.equals(london.name);
     }
 
     @Override

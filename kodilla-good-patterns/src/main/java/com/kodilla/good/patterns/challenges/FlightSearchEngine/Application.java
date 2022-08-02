@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.challenges.flights;
+package com.kodilla.good.patterns.challenges.FlightSearchEngine;
 
 public class Application {
     public static void main(String[] args) {
