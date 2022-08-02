@@ -46,9 +46,4 @@ public class SearchFlightEngine {
 
         System.out.println("To flight from: " + airport + " to: " + airport2 + " you can flight via airports: " + connectingFlightFrom);
     }
-
-    public void printMap() {
-        database.getMapOfFlights().entrySet().stream()
-                .forEach(System.out::println);
-    }
 }
