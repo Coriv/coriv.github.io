@@ -1,13 +1,6 @@
-//$(document).ready(function() {
-
-  //var apiRoot = 'https://kodilla-tasks-deploy.herokuapp.com/v1/tasks/';
-  //var datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
-  //var tasksContainer = $('[data-tasks-container]');
-
-  // init
-  $(document).ready(function() {
+ $(document).ready(function() {
     const apiRoot = 'https://kodilla-tasks-deploy.herokuapp.com/v1/tasks/';
-    const trelloApiRoot = 'http://localhost:8080/v1/trello';
+    const trelloApiRoot = 'https://trello.com/1/members/sebastianboron1/boards?fields=name,id&lists=all&key=c51cc4c716ff095e0241da18e14e1033&token=4e6ff5ae36f9e7459f81ade3fc782c3f5d3c91be0fa3232d1fadacb32031fe28';
     const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
     const $tasksContainer = $('[data-tasks-container]');
 
