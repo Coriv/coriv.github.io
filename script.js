@@ -1,7 +1,8 @@
  $(document).ready(function() {
     const apiRoot = 'https://springwebappli-prod-kodilla-task-application-orfz23.mo6.mogenius.io/v1/tasks';
     const trelloApiRoot = 'https://trello.com/1/members/sebastianboron1/boards?fields=name,id&lists=all&key=c51cc4c716ff095e0241da18e14e1033&token=4e6ff5ae36f9e7459f81ade3fc782c3f5d3c91be0fa3232d1fadacb32031fe28';
-    const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
+     const trelloApiRootCards = 'https://trello.com/1/members/sebastianboron1/cards?fields=name,id&lists=all&key=c51cc4c716ff095e0241da18e14e1033&token=4e6ff5ae36f9e7459f81ade3fc782c3f5d3c91be0fa3232d1fadacb32031fe28';
+     const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
     const $tasksContainer = $('[data-tasks-container]');
 
     var availableBoards = {};
@@ -166,7 +167,7 @@
     }
 
     function handleCardCreationRequest(event) {
-      var requestUrl = trelloApiRoot + '/cards';
+      var requestUrl = trelloApiRootCards
       var $relatedTaskRow = $(event.target).parents('[data-task-id]');
       var relatedTaskId = $relatedTaskRow.attr('data-task-id');
       var relatedTask = availableTasks[relatedTaskId];
